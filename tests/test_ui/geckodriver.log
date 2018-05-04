@@ -1,0 +1,23 @@
+1525417655363	geckodriver	INFO	geckodriver 0.18.0
+1525417655368	geckodriver	INFO	Listening on 127.0.0.1:58468
+1525417656453	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args ["-marionette"]
+1525417656860	Marionette	INFO	Enabled via --marionette
+1525417657670	Marionette	INFO	Listening on port 44103
+1525417657758	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://demoqa.com/, line 515: ReferenceError: accordion is not defined
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-109033876-1, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-109033876-1, line 69: unreachable code after return statement
+[Child 30113, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30113, Chrome_ChildThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30113, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1525417668344	geckodriver	INFO	geckodriver 0.18.0
+1525417668347	geckodriver	INFO	Listening on 127.0.0.1:44641
+1525417669423	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args ["-marionette"]
+1525417669822	Marionette	INFO	Enabled via --marionette
+1525417670584	Marionette	INFO	Listening on port 34868
+1525417670630	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://demoqa.com/, line 515: ReferenceError: accordion is not defined
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-109033876-1, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-109033876-1, line 69: unreachable code after return statement
+[Child 30309, Chrome_ChildThread] WARNING: pipe error (22): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30309, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-BgGWsI/firefox-59.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
