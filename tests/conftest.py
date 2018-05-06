@@ -4,6 +4,8 @@ import pytest
 from selenium.webdriver import Chrome, DesiredCapabilities, Firefox, Remote
 from selenium.webdriver.chrome.options import Options
 
+from tests import test_params
+
 
 @pytest.fixture(scope="class")
 def driver():
@@ -73,3 +75,26 @@ def base_url():
     :return: string containing the base url to use
     """
     return get_config("base_url")
+
+@pytest.fixture(scope="session")
+def http_test_url():
+    """
+    Set the base url using the env var: TST_BASE_URL
+    :return: string containing the base url to use
+    """
+    return get_config("http_test_url")
+
+
+def pytest_generate_tests(metafunc):
+    """
+    This method generates tests parameters.
+    It retrieves the test data from the yaml file
+    according to the name of the requested test.
+    N.B. This is run for EVERY test!
+    """
+    if 'ref' in metafunc.funcargnames:  # 'ref' parameter indicates data is taken from a file
+        test_name = metafunc.function.__name__[5:]
+        records = test_params.test_data[test_name]
+
+        argnames, argvalues = records
+        metafunc.parametrize(argnames, argvalues)
