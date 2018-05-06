@@ -1,0 +1,90 @@
+Let's assume that after clarifying the requirements document
+the following necessary details were specified :
+
+1 Input date format
+day: number one/two digits
+month: Word start from capital letter
+year: number four digits
+e. g. 6 May 2018/12 May 2018
+
+2 In case of invalid input error message is displayed
+
+3 Search boundaries start from 01.01.1990 ends 31.12.2020 inclusively
+
+TEST PLAN
+Start with the smoke test suite
+SMOKE test suite
+
+test1
+description
+verify valid test data input with today date: 6 May 2018/16 May 2018
+verify date with one and two digits
+
+test2
+description
+verify invalid input: 116 May 2018
+
+test3
+description
+Using the boundary values analysis approach
+verify boundary value from the past 01 January 1990
+
+test4
+description
+Using the boundary values analysis approach
+verify boundary value from the future 31 December 2020
+
+Continue with negative testing
+Verify the system not crash and corresponding error message displayed
+
+Using equivalence partitioning approach
+Divide negative test data on the following test data groups
+1 Using dot notation (invalid according to the specification)
+6.05.2018
+
+2 Using slash (invalid according to the specification)
+6/05/2018
+
+3 month as a number
+6 05 2018
+
+4 part of the year (invalid according to the specification)
+6 May 18
+
+5 month lowercase (invalid according to the specification)
+6 may 2018
+
+6 before boundary value 31 December 1989
+
+7 after boundary value 01 January 2021
+
+8 symbols instead of date test123
+
+9 empty date field
+
+10 short month form
+6 Apr 2018
+
+exceptional cases
+1 month has 30 days
+31 June 2018 (in June 2018 only 30 days)
+
+2 leap year date not exist
+29 February 2018 (in February 2018 only 28 days)
+
+3 leap year date exist
+29 February 2016
+
+4 invalid day date
+32 May 2018
+
+5 month not exists
+6 Test 2018
+
+Test execution approach
+First execute API test
+with different data sets
+as API tests much faster and stable
+
+Execute UI tests with minimal required data sets
+as UI test slow and unstable
