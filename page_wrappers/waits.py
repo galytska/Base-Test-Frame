@@ -45,3 +45,13 @@ class Waits:
         """
         return self.wait_element.until(
             ec.presence_of_element_located((By.XPATH, element)), message)
+
+    def until_element_visible_by_class_name(self, element, message=None):
+        """
+            wait until web element/elements if visible with delay 0,5 second by default
+            @param element: CLASS_NAME
+            @param message: Assertion message
+            @return: web element/elements else False
+        """
+        return self.wait_element.until(
+            ec.visibility_of_element_located((By.CLASS_NAME, element)), message)

@@ -1,4 +1,5 @@
 from page_wrappers.base_page import BasePage
+from selenium.webdriver.support.select import Select
 
 
 class LoginPage(BasePage):
@@ -16,4 +17,9 @@ class LoginPage(BasePage):
             self.wait.until_elements_presence_by_xpath(
                 '//li[contains(text(), "{}")]'.format(expected_msg))
         return login_failed_msg
+
+    def select_data_model(self, item):
+        select = Select(self.wait.until_element_visible_by_class_name('sidebar'))
+        select.select_by_visible_text('Data Models')
+
 

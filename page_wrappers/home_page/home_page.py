@@ -1,3 +1,5 @@
+from selenium.webdriver.support.select import Select
+
 from page_wrappers.base_page import BasePage
 
 
@@ -6,3 +8,5 @@ class HomePage(BasePage):
         logo = self.wait.until_elements_presence_by_xpath(
             '//a[@class="site-anchor"]')[0]
         logo.click()
+
+
